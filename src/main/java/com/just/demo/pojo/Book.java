@@ -1,6 +1,5 @@
 package com.just.demo.pojo;
 
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
 /**
@@ -8,5 +7,20 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class Book {
+
+    private String bookname;
+
+    public String getBookname() {
+        return bookname;
+    }
+
+    public void setBookname(String bookname) {
+        this.bookname = bookname;
+    }
+
+
+    public void showContent() {
+        System.out.println("书的内容:");
+    }
 
 }

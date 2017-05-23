@@ -7,5 +7,8 @@ import com.just.demo.service.local.OpLocal;
  */
 public class OpBean implements OpLocal{
 
+    public void upateRecord(int sqlid) {
+        System.out.println(" update Record>>" + sqlid);
+    }
 
 }

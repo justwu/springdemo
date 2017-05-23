@@ -1,16 +1,24 @@
 package com.just.demo.config;
 
-import com.fasterxml.jackson.databind.deser.Deserializers;
-import com.just.demo.dao.BaseDao;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.context.annotation.*;
+import com.just.demo.inject.Buyinjecter;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 /**
  * Created by flyhigh on 2017/5/21.
  */
 @Configuration
+@EnableAspectJAutoProxy   //创建拦截器的代理
 @ComponentScan("com.just.demo")
 public class Jconfig {
+
+
+    @Bean
+    public Buyinjecter buyinjecter() {
+        return new Buyinjecter();
+    }
 
 
  /*   @Bean

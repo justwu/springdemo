@@ -15,10 +15,12 @@ public class Testrun {
         UserShoppingService service=context.getBean(UserShoppingService.class);
         System.out.println("!!! start");
         service.buy("aa");
-        service.buy("aa");
-        service.buy("bb");
+     /*   service.buy("aa");
+        service.buy("bb");*/
         service.printlist();
         System.out.println("!!! end");
+
+
         context.close();
 
 
